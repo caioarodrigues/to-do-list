@@ -32,24 +32,40 @@ export default class TaskController {
   }
 
   public async update(req: Request, res: Response) {
-    const { id } = req.params;
-    const { title, description, dueDate, completed, createdAt } = req.body;
-    const task = await Task.update(
-      title,
-      description,
-      completed,
-      dueDate,
-      createdAt,
-      id
-    );
+    try {
+      const { id } = req.params;
+      const { title, description, dueDate, completed, createdAt } = req.body;
+      const task = await Task.update(
+        title,
+        description,
+        completed,
+        dueDate,
+        createdAt,
+        id
+      );
 
-    return res.json(task);
+      return res.json(task);
+    } catch (error) {
+      console.error(`Error while trying to update a task: ${error}`);
+
+      return res
+        .status(500)
+        .json({ msg: "Error while trying to update a task" });
+    }
   }
 
   public async delete(req: Request, res: Response) {
-    const { id } = req.params;
-    const task = await Task.delete(id);
-
-    return res.json(task);
+    try {
+      const { id } = req.params;
+      const task = await Task.delete(id);
+  
+      return res.json(task);
+    } catch (error) {
+      console.error(`Error while trying to delete a task: ${error}`);
+  
+      return res
+        .status(500)
+        .json({ msg: "Error while trying to delete a task" });
+    }
   }
 }
