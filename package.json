@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^1.7.3",
     "express": "^4.19.2",
     "json-server": "^1.0.0-beta.1"
   },
@@ -8,16 +9,19 @@
   "main": "index.js",
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@types/express": "^4.17.21",
     "eslint": "^9.8.0",
     "eslint-plugin-react": "^7.35.0",
     "globals": "^15.9.0",
     "jest": "^29.7.0",
     "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.0.1"
   },
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev:api": "nodemon api/src/server.ts",
+    "dev:db": "npx json-server --watch api/src/data/db.json --port 3001",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll --coverage",

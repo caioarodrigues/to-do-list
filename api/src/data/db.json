@@ -1,0 +1,26 @@
+{
+  "tasks": [
+    {
+      "id": "9de4",
+      "title": "teste",
+      "description": "descrip",
+      "dueDate": "11/05/2025"
+    },
+    {
+      "id": "4b9d",
+      "title": "teste",
+      "description": "descrip",
+      "dueDate": "11/05/2025"
+    },
+    {
+      "id": "c1cd",
+      "title": "teste",
+      "description": "descrip",
+      "completed": false,
+      "createdAt": "2024-08-11T15:13:56.013Z",
+      "dueDate": "2025-11-05T03:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    }
+  ]
+}
