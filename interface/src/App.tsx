@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { TaskList } from "./components/TaskList";
+import { FloatingButton } from "./components/FloatingButton";
 import axios from "axios";
-import "./App.css";
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -17,9 +17,9 @@ function App() {
 
   return (
     <>
-      <div>
-        <h1>Tasks</h1>
+      <div className="p-2">
         <TaskList tasks={tasks} />
+        <FloatingButton text="+" handler={() => window.location.href = "/new"} />
       </div>
     </>
   );
