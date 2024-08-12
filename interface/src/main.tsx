@@ -6,6 +6,7 @@ import { Layout } from "./Layout.tsx";
 import "./index.css";
 import { NewTask } from "./pages/NewTask.tsx";
 import { EditTask } from "./pages/EditTask.tsx";
+import { ViewTask } from "./pages/ViewTask.tsx";
 
 
 const router = createBrowserRouter([
@@ -31,6 +32,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <EditTask />
+      </Layout>
+    ),
+  },
+  {
+    path: "/task/:id",
+    element: (
+      <Layout>
+        <ViewTask />
       </Layout>
     ),
   }

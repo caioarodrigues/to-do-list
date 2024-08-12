@@ -16,7 +16,7 @@ interface TaskListProps {
 
 export const TaskList = ({ tasks }: TaskListProps) => {
   return (
-    <div className="flex flex-col gap-2 w-full">
+    <div className="flex flex-col gap-2 w-full flex-1">
       <h2 className="text-2xl">List of all tasks</h2>
       {tasks.map(
         (
