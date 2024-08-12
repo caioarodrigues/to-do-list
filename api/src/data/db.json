@@ -1,40 +1,11 @@
 {
   "tasks": [
     {
-      "title": "alternaditov",
-      "description": "descrip",
-      "completed": true,
-      "dueDate": "11/05/2025",
-      "createdAt": "11/05/2024",
-      "updatedAt": "2024-08-11T16:35:41.788Z",
-      "id": "c1cd"
-    },
-    {
-      "id": "7dd1",
-      "title": "título teste",
-      "description": "nova descr",
-      "completed": false,
-      "createdAt": "2024-08-11T16:24:35.868Z",
-      "dueDate": "2021-11-05T03:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
       "id": "bf1c",
       "title": "sadsadd",
       "description": "dsadasdas",
       "completed": false,
       "createdAt": "2024-08-12T22:25:58.973Z",
-      "dueDate": "2024-08-05T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
-      "id": "4079",
-      "title": "novaaa tast",
-      "description": "dsadasdas",
-      "completed": false,
-      "createdAt": "2024-08-12T22:26:22.648Z",
       "dueDate": "2024-08-05T00:00:00.000Z",
       "updatedAt": null,
       "deletedAt": null
