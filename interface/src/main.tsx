@@ -5,6 +5,8 @@ import App from "./App.tsx";
 import { Layout } from "./Layout.tsx";
 import "./index.css";
 import { NewTask } from "./pages/NewTask.tsx";
+import { EditTask } from "./pages/EditTask.tsx";
+
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
       <Layout>
         <h2>New Task</h2>
         <NewTask />
+      </Layout>
+    ),
+  },
+  {
+    path: "/edit/:id",
+    element: (
+      <Layout>
+        <EditTask />
       </Layout>
     ),
   }
