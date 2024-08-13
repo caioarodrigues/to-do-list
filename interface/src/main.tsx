@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
-import { Layout } from "./Layout.tsx";
+import { Index } from "./pages/Index.tsx";
+import { Layout } from "./layout.tsx";
 import "./index.css";
 import { NewTask } from "./pages/NewTask.tsx";
 import { EditTask } from "./pages/EditTask.tsx";
@@ -13,7 +13,7 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <Layout>
-        <App />
+        <Index />
       </Layout>
     ),
   },

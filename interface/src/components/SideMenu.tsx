@@ -1,7 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
+import { useGlobalContext } from "../hooks/useGlobalContext";
 
 export const SideMenu = () => {
+  const { tasks, setTasks } = useGlobalContext();
   const id = window.location.pathname.split("/")[2];
   const [task, setTask] = useState({
     title: "",
@@ -18,9 +20,18 @@ export const SideMenu = () => {
     axios
       .post("http://localhost:3000/task", task)
       .then((response) => {
+        const { data } = response;
         console.log(response);
         setTask({ title: "", description: "", dueDate: "" });
+
+        data.dueDate = data.dueDate.split("T")[0];
+        data.createdAt = data.createdAt.split("T")[0];
+
+        if (data.updatedAt) data.updatedAt = data.updatedAt.split("T")[0];
+        
+        return data;
       })
+      .then(data => setTasks([...tasks, data]))
       .catch((error) => console.error(error));
   };
 
@@ -39,6 +50,7 @@ export const SideMenu = () => {
         placeholder="Title"
         className="p-2 rounded-md border-zinc-500 border-2 border-opacity-70 outline-none
         text-zinc-500"
+        value={task.title}
         onChange={(e) => setTask({ ...task, title: e.currentTarget.value })}
       />
       <textarea
@@ -47,6 +59,7 @@ export const SideMenu = () => {
         placeholder="Add a descrition"
         className="px-2 py-4 rounded-md border-zinc-500 border-2 border-opacity-70 
         outline-none text-zinc-500"
+        value={task.description}
         onChange={(e) =>
           setTask({ ...task, description: e.currentTarget.value })
         }
@@ -60,6 +73,7 @@ export const SideMenu = () => {
           min={new Date().toISOString().split("T")[0]}
           className="p-2 rounded-md border-zinc-500 border-2 border-opacity-70 
           text-zinc-500 outline-none"
+          value={task.dueDate}
           onChange={(e) => setTask({ ...task, dueDate: e.currentTarget.value })}
         />
       </div>

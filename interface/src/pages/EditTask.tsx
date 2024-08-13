@@ -1,12 +1,8 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { ITask } from "../types";
 
-interface Task {
-  title: string;
-  description: string;
-  completed: boolean;
-  dueDate: string;
-}
+type Task = Pick<ITask, "title" | "description" | "completed" | "dueDate">;
 
 export const EditTask = () => {
   const id = window.location.pathname.split("/")[2];

@@ -1,17 +1,14 @@
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useState, useEffect } from "react";
+import { ITask } from "../types";
 
-interface Task {
-  title: string;
-  description: string;
-  completed: boolean;
-  dueDate: string;
-  createdAt: string;
-  updatedAt: string;
-}
+type TaskType = Pick<
+  ITask,
+  "completed" | "createdAt" | "description" | "dueDate" | "title" | "updatedAt"
+>;
 
 export const ViewTask = () => {
-  const [task, setTask] = useState<Task>();
+  const [task, setTask] = useState<TaskType>();
   const id = window.location.pathname.split("/")[2];
 
   useEffect(() => {

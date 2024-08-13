@@ -1,17 +1,8 @@
 import { Task } from "./Task";
-
-interface Task {
-  id: string;
-  title: string;
-  description: string;
-  completed: boolean;
-  dueDate: string;
-  createdAt: string;
-  updatedAt: string;
-}
+import { ITask } from "../types";
 
 interface TaskListProps {
-  tasks: Task[];
+  tasks: ITask[];
 }
 
 export const TaskList = ({ tasks }: TaskListProps) => {

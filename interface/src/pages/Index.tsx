@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
-import { TaskList } from "./components/TaskList";
-import { FloatingButton } from "./components/FloatingButton";
+import { useEffect } from "react";
+import { TaskList } from "../components/TaskList";
+import { FloatingButton } from "../components/FloatingButton";
+import { useGlobalContext } from "../hooks/useGlobalContext";
 import axios from "axios";
 
-function App() {
-  const [tasks, setTasks] = useState([]);
+export const Index = () => {
+  const { tasks, setTasks } = useGlobalContext();
 
   useEffect(() => {
     axios
@@ -13,7 +14,7 @@ function App() {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [setTasks]);
 
   return (
     <div className="p-2 pt-14 md:pt-0 w-full">
@@ -25,5 +26,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
