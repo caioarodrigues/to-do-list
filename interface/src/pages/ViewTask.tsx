@@ -1,3 +1,4 @@
+import { BsArrowLeftCircle } from "react-icons/bs";
 import { useState, useEffect } from "react";
 
 interface Task {
@@ -21,19 +22,48 @@ export const ViewTask = () => {
   }, [id]);
 
   return (
-    <div>
-      <h1>Task</h1>
+    <div className="self-start w-full p-2">
+      <h1 className="text-4xl font-bold mb-4">Task #{id}</h1>
       {task ? (
         <div className="text-zinc-400">
-          <h2>{task.title}</h2>
-          <p>{task.description}</p>
-          <p>Due date: {task.dueDate}</p>
-          <p>Created at: {task.createdAt}</p>
-          <p>Updated at: {task.updatedAt}</p>
+          <h2>
+            Title:{" "}
+            <span className="text-xl font-semibold mb-2">{task.title}</span>
+          </h2>
+          <p>
+            Completed:{" "}
+            <span className="text-xl font-medium mb-2">
+              {task.completed ? "Yes" : "No"}
+            </span>
+          </p>
+          <p>
+            Description:{" "}
+            <span className="text-xl font-medium mb-2">{task.description}</span>
+          </p>
+          <p>
+            Due date:{" "}
+            <span className="text-xl font-light mb-2">{task.dueDate}</span>
+          </p>
+          <p>
+            Created at:{" "}
+            <span className="text-xl font-light mb-2">{task.createdAt}</span>
+          </p>
+          <p>
+            Updated at:{" "}
+            <span className="text-xl font-light mb-2">{task.updatedAt}</span>
+          </p>
         </div>
       ) : (
         <p>Loading...</p>
       )}
+
+      <div className="flex gap-2 items-center py-2">
+        <BsArrowLeftCircle
+          className="text-4xl cursor-pointer"
+          onClick={() => (window.location.href = "/")}
+        />
+        <p className="text-white font-normal">Back to initial page</p>
+      </div>
     </div>
   );
 };

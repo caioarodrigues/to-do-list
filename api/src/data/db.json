@@ -1,15 +1,6 @@
 {
   "tasks": [
     {
-      "title": "eeee",
-      "description": "dsadasdas",
-      "completed": false,
-      "dueDate": "2024-08-05T00:00:00.000Z",
-      "createdAt": "2024-08-12T22:25:58.973Z",
-      "updatedAt": "2024-08-12T23:29:40.617Z",
-      "id": "bf1c"
-    },
-    {
       "id": "a8e3",
       "title": "tomar água",
       "description": "se hidratar é importantíssimo",
@@ -30,22 +21,17 @@
       "deletedAt": null
     },
     {
-      "id": "5cdd",
-      "title": "titulo",
-      "description": "tarefas aleatorias",
       "completed": false,
-      "createdAt": "2024-08-13T14:11:19.753Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
+      "updatedAt": "2024-08-13T17:39:22.202Z",
+      "id": "5cdd"
     },
     {
-      "id": "26a9",
-      "title": "titulo",
-      "description": "tarefas aleatorias",
+      "id": "bf97",
+      "title": "teste",
+      "description": "aaaa",
       "completed": false,
-      "createdAt": "2024-08-13T14:12:09.092Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
+      "createdAt": "2024-08-13T16:40:01.188Z",
+      "dueDate": "2024-08-16T00:00:00.000Z",
       "updatedAt": null,
       "deletedAt": null
     }
