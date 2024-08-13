@@ -6,10 +6,10 @@ export default class Task {
   private title: string;
   private description: string;
   private completed: boolean;
-  private createdAt: Date;
-  private updatedAt: Date | null;
-  private deletedAt: Date | null;
-  private dueDate: Date;
+  private createdAt: Date | string;
+  private updatedAt: Date | string | null;
+  private deletedAt: Date | string | null;
+  private dueDate: Date | string;
 
   public constructor(
     title: string,
@@ -48,6 +48,19 @@ export default class Task {
     const response = await axios
       .get(`http://localhost:${config.db_port}/tasks`)
       .then(({ data }) => data)
+      .then((tasks) => {
+        return tasks.map((task: Task) => {
+          if (typeof task.dueDate === "string" && typeof task.createdAt === "string") {
+            task.dueDate = task.dueDate.split("T")[0];
+            task.createdAt = task.createdAt.split("T")[0];
+          }
+
+          if (task.updatedAt)
+            task.updatedAt = task.updatedAt.toString().split("T")[0];
+
+          return task;
+        });
+      })
       .catch((error) => {
         console.error(`Error while trying to get all tasks: ${error}`);
 
@@ -61,6 +74,14 @@ export default class Task {
     const task = await axios
       .get(`http://localhost:${config.db_port}/tasks/${id}`)
       .then(({ data }) => data)
+      .then(task => {
+        task.dueDate = task.dueDate.split("T")[0];
+        task.createdAt = task.createdAt.split("T")[0];
+
+        if (task.updatedAt) task.updatedAt = task.updatedAt.split("T")[0];
+
+        return task;
+      })
       .catch((error) => {
         console.error(`Error while trying to get task by id: ${error}`);
 
