@@ -34,12 +34,14 @@ export const Task = ({
   return (
     <div
       className={`p-2 rounded-md border-2 border-zinc-300 border-opacity-70
-      w-full flex flex-col gap-4 
+      w-full flex flex-col gap-4 md:w-1/3 md:h-1/3 
       ${completedTask ? "bg-green-800" : "bg-zinc-500"}`}
       card-id={id}
     >
       <div className="flex flex-col gap-0">
-        <h2 className="text-3xl font-medium">{title}</h2>
+        <h2 className="text-3xl font-medium">
+          {title}
+        </h2>
         <p className="text-xl">{description}</p>
         <p className="text-md">Due date: {dueDate}</p>
       </div>

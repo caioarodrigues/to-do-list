@@ -16,7 +16,7 @@ function App() {
   }, []);
 
   return (
-    <div className="p-2 w-full">
+    <div className="p-2 pt-14 w-full">
       <TaskList tasks={tasks} />
       <FloatingButton
         text="+"

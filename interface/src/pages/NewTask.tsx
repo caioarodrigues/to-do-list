@@ -24,7 +24,7 @@ export const NewTask = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full pt-14">
       <h2 className="text-4xl text-center">New task</h2>
       <div className="flex items-center justify-between py-2 gap-4">
         <BsXCircle

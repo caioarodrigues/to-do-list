@@ -6,8 +6,8 @@ interface FloatingButtonProps {
 export const FloatingButton = ({ text, handler }: FloatingButtonProps) => {
   return (
     <button 
-      className="fixed bottom-4 right-2 bg-zinc-500 text-white rounded-md w-12 h-12 
-      shadow-md text-3xl border-2 border-zinc-300 border-opacity-70"
+      className="fixed bottom-4 right-4 bg-zinc-700 text-white rounded-md w-14 h-14 
+      shadow-md text-3xl border-2 border-amber-400 border-opacity-70"
       onClick={handler}>
       {text}
     </button>
