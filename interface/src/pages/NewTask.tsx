@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { BsXCircle, BsSaveFill } from "react-icons/bs";
 
 export const NewTask = () => {
   const [task, setTask] = useState({
@@ -9,49 +10,69 @@ export const NewTask = () => {
   });
 
   const newTaskHandler = () => {
+    const emptyFields = Object.values(task).some((field) => field === "");
+
+    if (emptyFields) return alert("Please fill all the fields");
+
     axios
       .post("http://localhost:3000/task", task)
-      .then((response) => console.log(response))
+      .then((response) => {
+        console.log(response);
+        setTask({ title: "", description: "", dueDate: "" });
+      })
       .catch((error) => console.error(error));
   };
 
   return (
-    <div>
-      <div className="flex justify-between text-2xl items-center font-medium">
-        <p onClick={() => (window.location.href = "/")}>X</p>
-        <a className="bg-zinc-500 p-2 rounded-md" onClick={newTaskHandler}>
-          Save
-        </a>
+    <div className="w-full">
+      <h2 className="text-4xl text-center">New task</h2>
+      <div className="flex items-center justify-between py-2 gap-4">
+        <BsXCircle
+          className="text-4xl cursor-pointer"
+          onClick={() => (window.location.href = "/")}
+        />
+
+        <BsSaveFill className="text-4xl text-white" onClick={newTaskHandler} />
       </div>
 
       <div>
-        <input
-          type="text"
-          placeholder={"Add a title"}
-          className="text-zinc-400 w-full p-2 rounded-md border-2 border-zinc-300 border-opacity-70"
-          onKeyUp={(e) => setTask({ ...task, title: e.currentTarget.value })}
-        />
-        <textarea
-          placeholder={"Add a description"}
-          className="text-zinc-400 w-full p-2 rounded-md border-2 border-zinc-300 border-opacity-70"
-          onKeyUp={(e) =>
-            setTask({ ...task, description: e.currentTarget.value })
-          }
-        />
-
-        <div className="flex w-full justify-between">
-          <label htmlFor="date" className="text-xl">
-            Set a due date
-          </label>
+        <div className="flex flex-col relative gap-2 flex-1">
           <input
-            type="date"
-            placeholder={"2021-01-01"}
-            id="date"
-            className="w-max text-zinc-400 p-2 rounded-sm"
+            type="text"
+            placeholder={"Add a title"}
+            className="text-zinc-600 w-full p-2 rounded-md border-2 border-zinc-300 
+            border-opacity-70 outline-none"
+            value={task.title}
+            onChange={(e) => setTask({ ...task, title: e.currentTarget.value })}
+          />
+          <textarea
+            placeholder={"Add a description"}
+            className="text-zinc-600 w-full p-2 rounded-md border-2 border-zinc-300 
+            border-opacity-70 outline-none"
+            value={task.description}
             onChange={(e) =>
-              setTask({ ...task, dueDate: e.currentTarget.value })
+              setTask({ ...task, description: e.currentTarget.value })
             }
           />
+
+          <div className="flex w-full justify-between items-center py-4">
+            <label htmlFor="date" className="text-xl">
+              Set a due date
+            </label>
+            <input
+              type="date"
+              placeholder={"2021-01-01"}
+              id="date"
+              className="w-max text-zinc-400 p-2 rounded-sm"
+              min={new Date().toISOString().split("T")[0]}
+              value={task.dueDate.split("T")[0]}
+              onChange={(e) => {
+                const dueDate = new Date(e.currentTarget.value);
+
+                setTask({ ...task, dueDate: dueDate.toISOString() });
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

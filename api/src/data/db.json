@@ -8,6 +8,46 @@
       "createdAt": "2024-08-12T22:25:58.973Z",
       "updatedAt": "2024-08-12T23:29:40.617Z",
       "id": "bf1c"
+    },
+    {
+      "id": "a8e3",
+      "title": "tomar água",
+      "description": "se hidratar é importantíssimo",
+      "completed": false,
+      "createdAt": "2024-08-13T13:50:27.251Z",
+      "dueDate": "2024-08-13T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "b4d4",
+      "title": "sadasdad",
+      "description": "sadsadad",
+      "completed": false,
+      "createdAt": "2024-08-13T14:09:03.157Z",
+      "dueDate": "2024-08-20T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "5cdd",
+      "title": "titulo",
+      "description": "tarefas aleatorias",
+      "completed": false,
+      "createdAt": "2024-08-13T14:11:19.753Z",
+      "dueDate": "2024-08-14T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "26a9",
+      "title": "titulo",
+      "description": "tarefas aleatorias",
+      "completed": false,
+      "createdAt": "2024-08-13T14:12:09.092Z",
+      "dueDate": "2024-08-14T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
     }
   ]
 }

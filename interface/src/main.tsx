@@ -8,7 +8,6 @@ import { NewTask } from "./pages/NewTask.tsx";
 import { EditTask } from "./pages/EditTask.tsx";
 import { ViewTask } from "./pages/ViewTask.tsx";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -22,7 +21,6 @@ const router = createBrowserRouter([
     path: "/new",
     element: (
       <Layout>
-        <h2>New Task</h2>
         <NewTask />
       </Layout>
     ),
@@ -42,7 +40,7 @@ const router = createBrowserRouter([
         <ViewTask />
       </Layout>
     ),
-  }
+  },
 ]);
 
 createRoot(document.getElementById("root")!).render(

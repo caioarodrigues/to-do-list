@@ -16,12 +16,13 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div className="p-2">
-        <TaskList tasks={tasks} />
-        <FloatingButton text="+" handler={() => window.location.href = "/new"} />
-      </div>
-    </>
+    <div className="p-2">
+      <TaskList tasks={tasks} />
+      <FloatingButton
+        text="+"
+        handler={() => (window.location.href = "/new")}
+      />
+    </div>
   );
 }
 
