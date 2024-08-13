@@ -23,10 +23,20 @@ export const Task = ({
 }: TaskProps) => {
   const [completedTask, setCompletedTask] = useState(completed);
   const toggleCompletedTask = () => {
+    const task: TaskProps = {
+      id,
+      title,
+      description,
+      completed: !completedTask,
+      dueDate,
+      createdAt,
+      updatedAt,
+    };
+
     setCompletedTask((status) => !status);
 
     return axios
-      .put(`http://localhost:3000/task/${id}`, { completed: completedTask })
+      .put(`http://localhost:3000/task/${id}`, task)
       .then((response) => console.log(response))
       .catch((error) => console.error(error));
   };
