@@ -79,14 +79,13 @@
       "deletedAt": null
     },
     {
-      "id": "54ec",
       "title": "11",
       "description": "1111",
-      "completed": false,
-      "createdAt": "2024-08-13T18:56:35.614Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
+      "completed": true,
+      "dueDate": "2024-08-14",
+      "createdAt": "2024-08-13",
+      "updatedAt": "2024-08-13T19:09:09.212Z",
+      "id": "54ec"
     }
   ]
 }
