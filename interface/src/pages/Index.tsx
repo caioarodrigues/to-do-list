@@ -18,7 +18,7 @@ export const Index = () => {
 
   return (
     <div className="p-2 pt-14 md:pt-0 w-full">
-      <TaskList tasks={tasks} />
+      <TaskList taskList={tasks} />
       <FloatingButton
         text="+"
         handler={() => (window.location.href = "/new")}

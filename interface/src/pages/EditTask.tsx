@@ -7,8 +7,8 @@ type Task = Pick<ITask, "title" | "description" | "completed" | "dueDate">;
 export const EditTask = () => {
   const id = window.location.pathname.split("/")[2];
   const [task, setTask] = useState<Task>();
-  const editTaskHandler = () => {
-    axios
+  const editTaskHandler = async () => {
+    await axios
       .put(`http://localhost:3000/task/${id}`, task)
       .then(() => console.log("Task updated"))
       .then(() => (window.location.href = "/"))
@@ -31,15 +31,15 @@ export const EditTask = () => {
           <h1 className="text-4xl text-white font-semibold">Edit Task</h1>
           <input
             type="text"
-            placeholder={task.title}
+            value={task.title}
             className="w-full p-2 rounded-md outline-none"
-            onKeyUp={(e) => setTask({ ...task, title: e.currentTarget.value })}
+            onChange={(e) => setTask({ ...task, title: e.currentTarget.value })}
           />
           <input
             type="text"
-            placeholder={task.description}
+            value={task.description}
             className="w-full p-2 rounded-md outline-none"
-            onKeyUp={(e) =>
+            onChange={(e) =>
               setTask({ ...task, description: e.currentTarget.value })
             }
           />
@@ -48,7 +48,8 @@ export const EditTask = () => {
               type="checkbox"
               id="completed"
               className="outline-none w-8 h-8 md:w-6 md:h-6 rounded-md"
-              onKeyUp={(e) =>
+              defaultChecked={task.completed}
+              onChange={(e) =>
                 setTask({ ...task, completed: e.currentTarget.value === "on" })
               }
             />
@@ -64,10 +65,10 @@ export const EditTask = () => {
             <input
               type="date"
               id="due-date"
-              placeholder={task.dueDate}
+              value={task.dueDate}
               min={new Date().toISOString().split("T")[0]}
               className="p-1 rounded-sm outline-none"
-              onKeyUp={(e) =>
+              onChange={(e) =>
                 setTask({ ...task, dueDate: e.currentTarget.value })
               }
             />

@@ -1,11 +1,15 @@
 import { Task } from "./Task";
 import { ITask } from "../types";
+import { useGlobalContext } from "../hooks/useGlobalContext";
 
 interface TaskListProps {
-  tasks: ITask[];
+  taskList: ITask[];
 }
 
-export const TaskList = ({ tasks }: TaskListProps) => {
+export const TaskList = ({ taskList }: TaskListProps) => {
+  const { tasks, setTasks } = useGlobalContext();
+  setTasks(taskList);
+  
   const doneTasks = tasks.filter((task) => task.completed);
   const pendingTasks = tasks.filter((task) => !task.completed);
 

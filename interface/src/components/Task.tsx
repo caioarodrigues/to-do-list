@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { BsTrash, BsPencil, BsEye } from "react-icons/bs";
+import { useGlobalContext } from "../hooks/useGlobalContext";
 import axios from "axios";
 
 interface TaskProps {
@@ -21,6 +22,7 @@ export const Task = ({
   createdAt,
   updatedAt,
 }: TaskProps) => {
+  const { tasks, setTasks } = useGlobalContext();
   const [completedTask, setCompletedTask] = useState(completed);
   const toggleCompletedTask = () => {
     const task: TaskProps = {
@@ -34,7 +36,11 @@ export const Task = ({
     };
 
     setCompletedTask((status) => !status);
-
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, completed: !completedTask } : task
+      )
+    );
     return axios
       .put(`http://localhost:3000/task/${id}`, task)
       .then((response) => console.log(response))
@@ -44,8 +50,10 @@ export const Task = ({
     return axios
       .delete(`http://localhost:3000/task/${id}`)
       .then((response) => console.log(response))
-      .then(() => window.location.reload())
-      .catch((error) => console.error(error));
+      .then(() => setTasks(tasks.filter((task) => task.id !== id)))
+      .catch((error) =>
+        alert(`An error occurred while trying to delete this task: ${error}`)
+      );
   };
 
   return (

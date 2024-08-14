@@ -3,40 +3,20 @@
     {
       "title": "toma sal",
       "description": "se hidratar é importantíssimo",
-      "completed": true,
+      "completed": false,
       "dueDate": "2024-08-13",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-13T18:58:01.375Z",
+      "updatedAt": "2024-08-14T13:26:52.123Z",
       "id": "a8e3"
     },
     {
       "title": "teste alimento xd",
       "description": "xd",
-      "completed": true,
+      "completed": false,
       "dueDate": "2024-08-16",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-13T19:04:23.077Z",
+      "updatedAt": "2024-08-14T13:23:00.025Z",
       "id": "bf97"
-    },
-    {
-      "id": "3487",
-      "title": "tesee",
-      "description": "sdadawwwww",
-      "completed": false,
-      "createdAt": "2024-08-13T18:18:28.412Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
-      "id": "cbbb",
-      "title": "sss",
-      "description": "ssss",
-      "completed": false,
-      "createdAt": "2024-08-13T18:37:00.927Z",
-      "dueDate": "2024-08-15T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
     },
     {
       "id": "8d3f",
@@ -49,43 +29,40 @@
       "deletedAt": null
     },
     {
-      "id": "b9c7",
       "title": "awww",
       "description": "wwww",
-      "completed": false,
-      "createdAt": "2024-08-13T18:50:55.450Z",
-      "dueDate": "2024-08-13T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
-      "id": "8a52",
-      "title": "w",
-      "description": "asd",
-      "completed": false,
-      "createdAt": "2024-08-13T18:52:29.332Z",
-      "dueDate": "2024-08-23T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
-      "id": "365b",
-      "title": "zxc",
-      "description": "asxa",
-      "completed": false,
-      "createdAt": "2024-08-13T18:55:07.529Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
+      "completed": true,
+      "dueDate": "2024-08-13",
+      "createdAt": "2024-08-13",
+      "updatedAt": "2024-08-14T13:26:55.952Z",
+      "id": "b9c7"
     },
     {
       "title": "11",
       "description": "1111",
-      "completed": true,
+      "completed": false,
       "dueDate": "2024-08-14",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-13T19:09:09.212Z",
+      "updatedAt": "2024-08-14T13:27:01.330Z",
       "id": "54ec"
+    },
+    {
+      "title": "nova tarefa",
+      "description": "testando o banco de dados e formatação",
+      "completed": true,
+      "dueDate": "2024-08-15",
+      "createdAt": "2024-08-14",
+      "updatedAt": "2024-08-14T13:27:04.926Z",
+      "id": "30ba"
+    },
+    {
+      "title": "elementos",
+      "description": "sdadwdaww",
+      "completed": true,
+      "dueDate": "2024-08-16",
+      "createdAt": "2024-08-14",
+      "updatedAt": "2024-08-14T13:17:43.424Z",
+      "id": "0cda"
     }
   ]
 }
