@@ -11,6 +11,7 @@ export const SideMenu = () => {
       border-r-2 border-zinc-500 relative col-span-3 w-full ${
         id && "opacity-70" 
       }`}
+      data-testid="side-menu"
     >
       <h2 className="text-2xl font-medium text-white">
         New task
@@ -49,6 +50,7 @@ export const SideMenu = () => {
           text-zinc-400 outline-none"
           disabled={id ? true : false}
           value={currentTask.dueDate}
+          data-testid="due-date-input"
           onChange={(e) =>
             updateCurrentTaskHandler("dueDate", e.currentTarget.value)
           }
