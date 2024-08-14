@@ -1,5 +1,5 @@
 import { BsTrash, BsPencil, BsEye } from "react-icons/bs";
-import { useTaskHandler } from "../hooks/useTaskHandler";
+import { useTask } from "../hooks/useTask";
 
 interface TaskProps {
   id: string;
@@ -25,7 +25,7 @@ export const Task = ({
     deleteTaskHandler,
     goToEditTaskScreenHandler,
     goToViewTaskScreenHandler,
-  } = useTaskHandler();
+  } = useTask();
   const currentTask = {
     id,
     title,

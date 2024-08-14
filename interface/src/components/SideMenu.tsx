@@ -1,39 +1,9 @@
-import { useState } from "react";
-import axios from "axios";
-import { useGlobalContext } from "../hooks/useGlobalContext";
+import { useSideMenu } from "../hooks/useSideMenu";
 
 export const SideMenu = () => {
-  const { tasks, setTasks } = useGlobalContext();
   const id = window.location.pathname.split("/")[2];
-  const [task, setTask] = useState({
-    title: "",
-    description: "",
-    dueDate: "",
-  });
-
-  const newTaskHandler = () => {
-    const emptyFields = Object.values(task).some((field) => field === "");
-
-    if (id) return;
-    if (emptyFields) return alert("Please fill all the fields");
-
-    axios
-      .post("http://localhost:3000/task", task)
-      .then((response) => {
-        const { data } = response;
-        console.log(response);
-        setTask({ title: "", description: "", dueDate: "" });
-
-        data.dueDate = data.dueDate.split("T")[0];
-        data.createdAt = data.createdAt.split("T")[0];
-
-        if (data.updatedAt) data.updatedAt = data.updatedAt.split("T")[0];
-        
-        return data;
-      })
-      .then(data => setTasks([...tasks, data]))
-      .catch((error) => console.error(error));
-  };
+  const { currentTask, updateCurrentTaskHandler, newTaskHandler } =
+    useSideMenu();
 
   return (
     <div
@@ -50,8 +20,8 @@ export const SideMenu = () => {
         placeholder="Title"
         className="p-2 rounded-md border-zinc-500 border-2 border-opacity-70 outline-none
         text-zinc-500"
-        value={task.title}
-        onChange={(e) => setTask({ ...task, title: e.currentTarget.value })}
+        value={currentTask.title}
+        onChange={(e) => updateCurrentTaskHandler("title", e.currentTarget.value)}
       />
       <textarea
         name=""
@@ -59,10 +29,8 @@ export const SideMenu = () => {
         placeholder="Add a descrition"
         className="px-2 py-4 rounded-md border-zinc-500 border-2 border-opacity-70 
         outline-none text-zinc-500"
-        value={task.description}
-        onChange={(e) =>
-          setTask({ ...task, description: e.currentTarget.value })
-        }
+        value={currentTask.description}
+        onChange={(e) => updateCurrentTaskHandler("description", e.currentTarget.value)}
       />
       <div className="flex flex-col gap-1">
         <label htmlFor="">Set a due date</label>
@@ -73,12 +41,12 @@ export const SideMenu = () => {
           min={new Date().toISOString().split("T")[0]}
           className="p-2 rounded-md border-zinc-500 border-2 border-opacity-70 
           text-zinc-500 outline-none"
-          value={task.dueDate}
-          onChange={(e) => setTask({ ...task, dueDate: e.currentTarget.value })}
+          value={currentTask.dueDate}
+          onChange={(e) => updateCurrentTaskHandler("dueDate", e.currentTarget.value)}
         />
       </div>
       <span
-        onClick={newTaskHandler}
+        onClick={() => newTaskHandler(currentTask, id)}
         className={`outline-none p-2 rounded-md border-2 border-zinc-400 border-opacity-70
         bg-blue-500 md:hover:bg-blue-600 transition-colors delay-100
         ${id ? "cursor-not-allowed" : "cursor-pointer"}`}

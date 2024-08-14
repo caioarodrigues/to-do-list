@@ -2,7 +2,7 @@ import { useGlobalContext } from "../hooks/useGlobalContext";
 import { ITask } from "../types";
 import axios from "axios";
 
-export const useTaskHandler = () => {
+export const useTask = () => {
   const { tasks, setTasks } = useGlobalContext();
 
   const toggleCompletedTaskHandler = (currentTask: ITask) => {
