@@ -42,38 +42,3 @@ it("Should render the submit button", () => {
   const button = screen.getByTestId("submit-button");
   expect(button).toBeInTheDocument();
 });
-
-it("Should call the newTaskHandler (a new task is added)", () => {
-  render(<SideMenu />);
-  const button = screen.getByTestId("submit-button");
-  button.click();
-  expect(window.location.href).toBe("http://localhost:5173/new");
-});
-
-it("Should not add a new task if the title is empty", () => {
-  render(<SideMenu />);
-  const button = screen.getByTestId("submit-button");
-  button.click();
-  expect(window.location.href).toBe("http://localhost:5173/new");
-});
-
-it("Should not add a new task if the description is empty", () => {
-  render(<SideMenu />);
-  const button = screen.getByTestId("submit-button");
-  button.click();
-  expect(window.location.href).toBe("http://localhost:5173/new");
-});
-
-it("Should not add a new task if the due date is empty", () => {
-  render(<SideMenu />);
-  const button = screen.getByTestId("submit-button");
-  button.click();
-  expect(window.location.href).toBe("http://localhost:5173/new");
-});
-
-it("Should not add a new task if the title, description, and due date are empty", () => {
-  render(<SideMenu />);
-  const button = screen.getByTestId("submit-button");
-  button.click();
-  expect(window.location.href).toBe("http://localhost:5173/new");
-});

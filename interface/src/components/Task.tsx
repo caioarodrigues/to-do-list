@@ -46,22 +46,31 @@ export const Task = ({
           ? "bg-emerald-700 md:hover:bg-emerald-800"
           : "bg-zinc-500 md:hover:bg-zinc-600"
       }`}
-      card-id={id}
+      data-testid="task"
     >
       <div className="flex flex-col gap-0 overflow-hidden">
         <h2
           className="text-3xl font-medium md:text-xl border-b-2 border-b-white 
-        border-opacity-30"
+          border-opacity-30"
+          data-testid="title"
         >
           {title}
         </h2>
-        <p className="text-xl md:text-md text-clip">{description}</p>
-        <p className="text-md md:text-sm">Due date: {dueDate}</p>
+        <p className="text-xl md:text-md text-clip" data-testid="description">
+          {description}
+        </p>
+        <p className="text-md md:text-sm" data-testid="due-date">
+          Due date: {dueDate}
+        </p>
       </div>
       <div>
-        <p className="text-md md:text-sm">Created at: {createdAt}</p>
+        <p className="text-md md:text-sm" data-testid="created-at">
+          Created at: {createdAt}
+        </p>
         {updatedAt && (
-          <p className="text-md md:text-sm">Updated at: {updatedAt}</p>
+          <p className="text-md md:text-sm" data-testid="updated-at">
+            Updated at: {updatedAt}
+          </p>
         )}
         <div className="flex pt-2 items-center justify-between gap-4 w-full">
           <div className="flex flex-col items-center">
@@ -71,6 +80,7 @@ export const Task = ({
               onClick={() => toggleCompletedTaskHandler(currentTask)}
               className="w-8 h-8 md:w-6 md:h-6 rounded-sm border border-black 
               cursor-pointer"
+              data-testid="completed-status"
             />
             <p className="text-sm md:text-xs">done</p>
           </div>
@@ -78,6 +88,7 @@ export const Task = ({
             <BsEye
               className="text-3xl md:text-2xl cursor-pointer"
               onClick={() => goToViewTaskScreenHandler(id)}
+              data-testid="view-task"
             />
             <p className="text-sm md:text-xs">view</p>
           </div>
@@ -85,6 +96,7 @@ export const Task = ({
             <BsPencil
               className="text-3xl md:text-2xl cursor-pointer"
               onClick={() => goToEditTaskScreenHandler(id)}
+              data-testid="edit-task"
             />
             <p className="text-sm md:text-xs">edit</p>
           </div>
@@ -92,6 +104,7 @@ export const Task = ({
             <BsTrash
               className="text-3xl md:text-2xl cursor-pointer"
               onClick={() => deleteTaskHandler(id)}
+              data-testid="delete-task"
             />
             <p className="text-sm md:text-xs">delete</p>
           </div>

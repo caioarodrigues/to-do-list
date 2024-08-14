@@ -40,11 +40,11 @@ export const SideMenu = () => {
         }
       />
       <div className="flex flex-col gap-1">
-        <label htmlFor="">Set a due date</label>
+        <label htmlFor="due-date">Set a due date</label>
         <input
           type="date"
           name=""
-          id=""
+          id="due-date"
           min={new Date().toISOString().split("T")[0]}
           className="p-2 rounded-md border-zinc-500 border-2 border-opacity-70 
           text-zinc-400 outline-none"
@@ -58,6 +58,7 @@ export const SideMenu = () => {
       </div>
       <span
         onClick={() => newTaskHandler(currentTask, id)}
+        data-testid="submit-button"
         className={`outline-none p-2 rounded-md border-2 border-opacity-70
         bg-blue-500
         ${
