@@ -64,16 +64,6 @@
       "id": "b41b"
     },
     {
-      "id": "8bac",
-      "title": "wasda",
-      "description": "sdadwda",
-      "completed": false,
-      "createdAt": "2024-08-14T14:21:30.901Z",
-      "dueDate": "2024-08-16T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
       "title": "zzzzzz",
       "description": "zz",
       "completed": true,

@@ -39,9 +39,13 @@ export const Task = ({
   return (
     <div
       className={`p-2 md:p-1 rounded-md border-2 border-zinc-300 
-      border-opacity-70 w-full flex flex-col gap-4 md:hover:bg-zinc-600 
+      border-opacity-70 w-full flex flex-col gap-4 
       md:hover:border-zinc-400 ease-in transition-all md:justify-between
-      ${completed ? "bg-green-800" : "bg-zinc-500"}`}
+      ${
+        completed
+          ? "bg-emerald-700 md:hover:bg-emerald-800"
+          : "bg-zinc-500 md:hover:bg-zinc-600"
+      }`}
       card-id={id}
     >
       <div className="flex flex-col gap-0 overflow-hidden">
