@@ -7,10 +7,14 @@ export default class TaskController {
       const { title, description, dueDate } = req.body;
       const task = new Task(title, description, new Date(), new Date(dueDate));
 
+      if (!title || !description || !dueDate) {
+        return res.status(500).json({ msg: "Missing required fields" });
+      }
+
       await task.create();
       return res.status(201).json(task);
     } catch (error) {
-      console.error(`Error while trying to create a new task: ${error}`);
+      console.log(`Error while trying to create a new task: ${error}`);
 
       return res
         .status(500)
@@ -28,6 +32,8 @@ export default class TaskController {
     const { id } = req.params;
     const task = await Task.listById(id);
 
+    if (!task) return res.status(404);
+
     return res.json(task);
   }
 
@@ -35,6 +41,11 @@ export default class TaskController {
     try {
       const { id } = req.params;
       const { title, description, dueDate, completed, createdAt } = req.body;
+
+      if (!title || !description || !dueDate || !completed || !createdAt) {
+        return res.status(500).json({ msg: "Missing required fields" });
+      }
+
       const task = await Task.update(
         title,
         description,
@@ -46,7 +57,7 @@ export default class TaskController {
 
       return res.json(task);
     } catch (error) {
-      console.error(`Error while trying to update a task: ${error}`);
+      console.log(`Error while trying to update a task: ${error}`);
 
       return res
         .status(500)
@@ -56,13 +67,13 @@ export default class TaskController {
 
   public async delete(req: Request, res: Response) {
     try {
-      const { id } = req.params;
+      const { id } = req.params;      
       const task = await Task.delete(id);
-  
+      
       return res.json(task);
     } catch (error) {
-      console.error(`Error while trying to delete a task: ${error}`);
-  
+      console.log(`Error while trying to delete a task: ${error}`);
+
       return res
         .status(500)
         .json({ msg: "Error while trying to delete a task" });

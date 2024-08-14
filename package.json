@@ -29,7 +29,7 @@
     "dev:api": "nodemon api/src/server.ts",
     "dev:db": "npx json-server --watch api/src/data/db.json --port 3001",
     "test": "jest",
-    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll",
+    "test:watch": "jest --watchAll",
     "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll --coverage",
     "test:model:task": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --testPathPattern=backend/src/test/models/Task.test.ts"
   },

@@ -62,7 +62,7 @@ export default class Task {
         });
       })
       .catch((error) => {
-        console.error(`Error while trying to get all tasks: ${error}`);
+        console.log(`Error while trying to get all tasks: ${error}`);
 
         return [];
       });
@@ -83,9 +83,9 @@ export default class Task {
         return task;
       })
       .catch((error) => {
-        console.error(`Error while trying to get task by id: ${error}`);
+        console.log(`Error while trying to get task by id: ${error}`);
 
-        return {};
+        return null;
       });
 
     return task;

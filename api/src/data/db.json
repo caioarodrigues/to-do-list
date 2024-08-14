@@ -37,12 +37,12 @@
       "id": "b9c7"
     },
     {
-      "title": "nova tarefa",
-      "description": "testando o banco de dados e formatação",
+      "title": "Task 1",
+      "description": "NEW Description of task 1",
       "completed": true,
-      "dueDate": "2024-08-15",
-      "createdAt": "2024-08-14",
-      "updatedAt": "2024-08-14T13:27:04.926Z",
+      "dueDate": "2024-09-30",
+      "createdAt": "2024-09-20",
+      "updatedAt": "2024-08-14T21:39:03.019Z",
       "id": "30ba"
     },
     {
@@ -71,6 +71,382 @@
       "createdAt": "2024-08-14",
       "updatedAt": "2024-08-14T14:21:49.767Z",
       "id": "a1da"
+    },
+    {
+      "id": "1d27",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:15:19.287Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "0a0a",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:15:36.866Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "200e",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:17:22.973Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "ee54",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:17:23.092Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "8d64",
+      "completed": false,
+      "createdAt": "2024-08-14T21:17:23.123Z",
+      "dueDate": null,
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "e421",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:17:23.142Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "b1d0",
+      "description": "nova descr",
+      "completed": false,
+      "createdAt": "2024-08-14T21:18:08.069Z",
+      "dueDate": "2021-11-05T03:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "6021",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:19:05.720Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "5261",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:19:05.837Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "8a1a",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:19:45.515Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "8cf6",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:20:28.872Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "ea65",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:20:49.525Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "2c05",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:21:07.920Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "3e5a",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:21:53.493Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "c481",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:23:34.266Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "f831",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:24:22.690Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "7fc6",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:30:33.058Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "bbee",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:30:33.152Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "48bf",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:32:18.979Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "49c6",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:32:19.091Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "eb9e",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:33:02.370Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "1649",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:33:02.469Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "d9cc",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:33:48.610Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "5a23",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:33:48.776Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "f442",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:34:36.205Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "ebfb",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:34:36.307Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "951f",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:35:15.182Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "40b7",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:35:15.262Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "7388",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:36:19.359Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "7000",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:36:19.489Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "0fe5",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:36:57.052Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "9354",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:36:57.158Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "8e59",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:37:21.714Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "db03",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:37:21.856Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "2742",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:38:30.639Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "5b57",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:38:30.777Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "7c92",
+      "title": "Task 1",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:39:02.964Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "ed9d",
+      "title": "Testing task",
+      "description": "Description of task 1",
+      "completed": false,
+      "createdAt": "2024-08-14T21:39:03.062Z",
+      "dueDate": "2024-09-30T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
     }
   ]
 }
