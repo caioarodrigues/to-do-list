@@ -3,10 +3,10 @@
     {
       "title": "toma sal",
       "description": "se hidratar é importantíssimo",
-      "completed": false,
+      "completed": true,
       "dueDate": "2024-08-13",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-14T13:26:52.123Z",
+      "updatedAt": "2024-08-14T13:32:55.995Z",
       "id": "a8e3"
     },
     {
@@ -63,6 +63,26 @@
       "createdAt": "2024-08-14",
       "updatedAt": "2024-08-14T13:17:43.424Z",
       "id": "0cda"
+    },
+    {
+      "id": "b24e",
+      "title": "nova task",
+      "description": "aw",
+      "completed": false,
+      "createdAt": "2024-08-14T13:32:00.177Z",
+      "dueDate": "2024-08-15T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
+    },
+    {
+      "id": "a5c4",
+      "title": "13",
+      "description": "13",
+      "completed": false,
+      "createdAt": "2024-08-14T13:32:43.790Z",
+      "dueDate": "2024-08-14T00:00:00.000Z",
+      "updatedAt": null,
+      "deletedAt": null
     }
   ]
 }
