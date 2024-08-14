@@ -16,12 +16,13 @@ export const TaskList = ({ taskList }: TaskListProps) => {
   const pendingTasks = tasks.filter((task) => !task.completed);
 
   return (
-    <div>
+    <div data-testid="tasks-list">
       <div>
         <h2 className="text-4xl font-medium">List of all tasks</h2>
         <div
           className="flex flex-col gap-2 w-full md:flex-row md:flex-grow-0 md:flex-wrap
-        md:grid md:grid-cols-4 pt-2"
+          md:grid md:grid-cols-4 pt-2"
+          data-testid="penting-tasks-list"
         >
           {pendingTasks.map(
             (
@@ -54,7 +55,8 @@ export const TaskList = ({ taskList }: TaskListProps) => {
         <h2 className="text-4xl font-medium">Done tasks</h2>
         <div
           className="flex flex-col gap-2 w-full md:flex-row md:flex-grow-0 md:flex-wrap
-        md:grid md:grid-cols-4 pt-2"
+          md:grid md:grid-cols-4 pt-2"
+          data-testid="done-tasks-list"
         >
           {doneTasks.map(
             (
