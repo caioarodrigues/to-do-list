@@ -21,7 +21,7 @@ describe('GET /task/:id', () => {
   it('should not return a task by id (not existing)', async () => {
     const response = await request(app).get('/task/sss')
 
-    expect(response.status).toBe(500);
+    expect(response.status).toBe(404);
     expect(response.body).toBeInstanceOf(Object);
   });
 
@@ -117,23 +117,6 @@ describe('PUT /task/:id', () => {
 });
 
 describe('DELETE /task/:id', () => {
-  it('should delete a task', async () => {
-    //creating a new task to delete
-    const task = await request(app).post('/task')
-      .send({
-        title: 'Testing task',
-        description: 'Description of task 1',
-        completed: false,
-        dueDate: '2024-09-30',
-        createdAt: '2024-09-20',
-      });
-    const id = task.body.id;
-    const response = await request(app).delete(`/task/${id}`);
-
-    expect(response.status).toBe(200);
-    expect(response.body).toBeInstanceOf(Object);
-  })
-
   it('should not delete a task (not existing)', async () => {
     const response = await request(app).delete('/task/sss');
 

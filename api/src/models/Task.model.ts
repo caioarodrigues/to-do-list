@@ -73,7 +73,7 @@ export default class Task {
   public static async listById(id: string): Promise<Task> {
     const task = await axios
       .get(`http://localhost:${config.db_port}/tasks/${id}`)
-      .then(({ data }) => data)
+      .then(({ data }) => data || undefined)
       .then(task => {
         task.dueDate = task.dueDate.split("T")[0];
         task.createdAt = task.createdAt.split("T")[0];
@@ -84,8 +84,6 @@ export default class Task {
       })
       .catch((error) => {
         console.log(`Error while trying to get task by id: ${error}`);
-
-        return null;
       });
 
     return task;
@@ -98,8 +96,8 @@ export default class Task {
     dueDate: Date,
     createdAt: Date,
     id: string
-  ): Promise<Task> {
-    await axios
+  ) {
+    return await axios
       .put(`http://localhost:${config.db_port}/tasks/${id}`, {
         title,
         description,
@@ -110,15 +108,21 @@ export default class Task {
       })
       .then(({ data }) => {
         console.log(`Task updated: ${data}`);
-      });
 
-    return new Task(title, description, new Date(), dueDate);
+        return new Task(title, description, new Date(), dueDate);
+      })
+      .catch((error) => {
+        console.log(`Error while trying to update task: ${error}`)
+      });
   }
 
   public static async delete(id: string): Promise<Task> {
     const task = await axios
       .get(`http://localhost:${config.db_port}/tasks/${id}`)
-      .then(({ data }) => data);
+      .then(({ data }) => data)
+      .catch((error) => {
+        console.log(`Error while trying to get task by id: ${error}`);
+      });
 
     await axios
       .delete(`http://localhost:${config.db_port}/tasks/${id}`)

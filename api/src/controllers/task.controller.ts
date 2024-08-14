@@ -32,7 +32,7 @@ export default class TaskController {
     const { id } = req.params;
     const task = await Task.listById(id);
 
-    if (!task) return res.status(404);
+    if (!task) return res.status(404).send();
 
     return res.json(task);
   }

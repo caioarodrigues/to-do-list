@@ -1,6 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import { BsXCircle, BsSaveFill } from "react-icons/bs";
 
 export const NewTask = () => {
   const [task, setTask] = useState({
@@ -26,15 +25,6 @@ export const NewTask = () => {
   return (
     <div className="w-full pt-14">
       <h2 className="text-4xl text-center">New task</h2>
-      <div className="flex items-center justify-between py-2 gap-4">
-        <BsXCircle
-          className="text-4xl cursor-pointer"
-          onClick={() => (window.location.href = "/")}
-        />
-
-        <BsSaveFill className="text-4xl text-white" onClick={newTaskHandler} />
-      </div>
-
       <div>
         <div className="flex flex-col relative gap-2 flex-1">
           <input
@@ -73,6 +63,13 @@ export const NewTask = () => {
               }}
             />
           </div>
+
+          <p
+            className="cursor-pointer p-2 text-xl bg-zinc-500 text-white rounded-md"
+            onClick={newTaskHandler}
+          >
+            Save task
+          </p>
         </div>
       </div>
     </div>
