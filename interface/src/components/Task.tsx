@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { BsTrash, BsPencil, BsEye } from "react-icons/bs";
-import { useGlobalContext } from "../hooks/useGlobalContext";
-import axios from "axios";
+import { useTaskHandler } from "../hooks/useTaskHandler";
 
 interface TaskProps {
   id: string;
@@ -22,38 +20,20 @@ export const Task = ({
   createdAt,
   updatedAt,
 }: TaskProps) => {
-  const { tasks, setTasks } = useGlobalContext();
-  const [completedTask, setCompletedTask] = useState(completed);
-  const toggleCompletedTask = () => {
-    const task: TaskProps = {
-      id,
-      title,
-      description,
-      completed: !completedTask,
-      dueDate,
-      createdAt,
-      updatedAt,
-    };
-
-    setCompletedTask((status) => !status);
-    setTasks(
-      tasks.map((task) =>
-        task.id === id ? { ...task, completed: !completedTask } : task
-      )
-    );
-    return axios
-      .put(`http://localhost:3000/task/${id}`, task)
-      .then((response) => console.log(response))
-      .catch((error) => console.error(error));
-  };
-  const deleteTaskHandler = (id: string) => {
-    return axios
-      .delete(`http://localhost:3000/task/${id}`)
-      .then((response) => console.log(response))
-      .then(() => setTasks(tasks.filter((task) => task.id !== id)))
-      .catch((error) =>
-        alert(`An error occurred while trying to delete this task: ${error}`)
-      );
+  const {
+    toggleCompletedTaskHandler,
+    deleteTaskHandler,
+    goToEditTaskScreenHandler,
+    goToViewTaskScreenHandler,
+  } = useTaskHandler();
+  const currentTask = {
+    id,
+    title,
+    description,
+    completed,
+    dueDate,
+    createdAt,
+    updatedAt,
   };
 
   return (
@@ -61,7 +41,7 @@ export const Task = ({
       className={`p-2 md:p-1 rounded-md border-2 border-zinc-300 
       border-opacity-70 w-full flex flex-col gap-4 md:hover:bg-zinc-600 
       md:hover:border-zinc-400 ease-in transition-all md:justify-between
-      ${completedTask ? "bg-green-800" : "bg-zinc-500"}`}
+      ${completed ? "bg-green-800" : "bg-zinc-500"}`}
       card-id={id}
     >
       <div className="flex flex-col gap-0 overflow-hidden">
@@ -83,8 +63,8 @@ export const Task = ({
           <div className="flex flex-col items-center">
             <input
               type="checkbox"
-              defaultChecked={completedTask}
-              onClick={toggleCompletedTask}
+              defaultChecked={completed}
+              onClick={() => toggleCompletedTaskHandler(currentTask)}
               className="w-8 h-8 md:w-6 md:h-6 rounded-sm border border-black 
               cursor-pointer"
             />
@@ -93,14 +73,14 @@ export const Task = ({
           <div className="flex flex-col items-center">
             <BsEye
               className="text-3xl md:text-2xl cursor-pointer"
-              onClick={() => (window.location.href = `/task/${id}`)}
+              onClick={() => goToViewTaskScreenHandler(id)}
             />
             <p className="text-sm md:text-xs">view</p>
           </div>
           <div className="flex flex-col items-center">
             <BsPencil
               className="text-3xl md:text-2xl cursor-pointer"
-              onClick={() => (window.location.href = `/edit/${id}`)}
+              onClick={() => goToEditTaskScreenHandler(id)}
             />
             <p className="text-sm md:text-xs">edit</p>
           </div>

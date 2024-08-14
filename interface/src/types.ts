@@ -5,5 +5,5 @@ export interface ITask {
   completed: boolean;
   dueDate: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string | null;
 }

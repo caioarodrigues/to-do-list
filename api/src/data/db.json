@@ -1,50 +1,40 @@
 {
   "tasks": [
     {
-      "title": "toma sal",
+      "title": "toma whey",
       "description": "se hidratar é importantíssimo",
       "completed": true,
       "dueDate": "2024-08-13",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-14T13:32:55.995Z",
+      "updatedAt": "2024-08-14T13:44:02.437Z",
       "id": "a8e3"
     },
     {
       "title": "teste alimento xd",
       "description": "xd",
-      "completed": false,
+      "completed": true,
       "dueDate": "2024-08-16",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-14T13:23:00.025Z",
+      "updatedAt": "2024-08-14T13:54:36.638Z",
       "id": "bf97"
     },
     {
-      "id": "8d3f",
       "title": "saww",
       "description": "wwww",
       "completed": false,
-      "createdAt": "2024-08-13T18:37:47.524Z",
-      "dueDate": "2024-08-16T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
+      "dueDate": "2024-08-16",
+      "createdAt": "2024-08-13",
+      "updatedAt": "2024-08-14T13:54:45.495Z",
+      "id": "8d3f"
     },
     {
       "title": "awww",
       "description": "wwww",
-      "completed": true,
+      "completed": false,
       "dueDate": "2024-08-13",
       "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-14T13:26:55.952Z",
+      "updatedAt": "2024-08-14T13:54:42.496Z",
       "id": "b9c7"
-    },
-    {
-      "title": "11",
-      "description": "1111",
-      "completed": false,
-      "dueDate": "2024-08-14",
-      "createdAt": "2024-08-13",
-      "updatedAt": "2024-08-14T13:27:01.330Z",
-      "id": "54ec"
     },
     {
       "title": "nova tarefa",
@@ -63,26 +53,6 @@
       "createdAt": "2024-08-14",
       "updatedAt": "2024-08-14T13:17:43.424Z",
       "id": "0cda"
-    },
-    {
-      "id": "b24e",
-      "title": "nova task",
-      "description": "aw",
-      "completed": false,
-      "createdAt": "2024-08-14T13:32:00.177Z",
-      "dueDate": "2024-08-15T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
-    },
-    {
-      "id": "a5c4",
-      "title": "13",
-      "description": "13",
-      "completed": false,
-      "createdAt": "2024-08-14T13:32:43.790Z",
-      "dueDate": "2024-08-14T00:00:00.000Z",
-      "updatedAt": null,
-      "deletedAt": null
     }
   ]
 }
