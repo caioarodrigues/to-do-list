@@ -6,7 +6,12 @@ type Task = Pick<ITask, "title" | "description" | "completed" | "dueDate">;
 
 export const EditTask = () => {
   const id = window.location.pathname.split("/")[2];
-  const [task, setTask] = useState<Task>();
+  const [task, setTask] = useState<Task>({
+    completed: false,
+    description: "",
+    dueDate: "",
+    title: "",
+  });
   const editTaskHandler = async () => {
     await axios
       .put(`http://localhost:3000/task/${id}`, task)
